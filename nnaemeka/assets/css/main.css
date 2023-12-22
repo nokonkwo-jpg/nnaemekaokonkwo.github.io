@@ -30,8 +30,16 @@ html
     font-size: 10px;
 }
 
-body {
-    background: #000; /* Black background */
+body
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+    color: #fff;
+    background: #fff;
+
+    -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -39,25 +47,96 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-    color: #brown; /* Brown text color */
+h6
+{
+    font-weight: normal;
+
+    letter-spacing: .02em;
+
+    color: #fff;
+}
+
+h1
+{
+    font-size: 7.2rem;
+}
+
+h2
+{
+    font-size: 3.9rem;
+}
+
+h3
+{
+    font-size: 3.4rem;
+}
+
+h4
+{
+    font-size: 2.9rem;
+}
+
+h5
+{
+    font-size: 2.3rem;
+}
+
+h6
+{
+    font-size: 1.9rem;
+}
+
+p
+{
+    font-size: 1.8rem;
+    line-height: 1.7em;
 }
 
 a,
 a:hover,
-a:focus {
-    color: #tan; /* Tan link color */
+a:focus
+{
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+         -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+    text-decoration: none;
+
+    color: #fff;
 }
 
-button {
-    border: 2px solid #tan; /* Tan border color for buttons */
+button
+{
+    border: 2px solid #fff;
+    background: none;
 }
 
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:focus,
-.btn-primary:active {
-    border-color: #tan !important;
+.btn-primary:active
+{
+    border-color: #fff !important;
+    outline: none !important;
+    background: none !important;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+@media (max-width:600px)
+{
+    html
+    {
+        font-size: 8px;
+    }
+}
+
+@media (max-width:500px)
+{
+    html
+    {
+        font-size: 7px;
+    }
 }
 
 
