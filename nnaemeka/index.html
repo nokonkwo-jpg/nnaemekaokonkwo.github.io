@@ -34,7 +34,6 @@
         }
 
         .floating-bar {
-            position: fixed;
             top: 0;
             right: 0;
             background-color: rgba(0, 0, 0, 0.5);
@@ -625,6 +624,36 @@ Developed unit tests to ensure the accuracy of transformations from an initial t
         <!-- JAVASCRIPTS -->
         <script type="text/javascript" src="assets/js/plugins.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
+
+       <!-- JAVASCRIPT -->
+<script>
+    // Get the floating bar element
+    var floatingBar = document.querySelector('.floating-bar');
+
+    // Get the initial scroll position
+    var lastScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    // Function to handle scroll events
+    function handleScroll() {
+        var currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        // Check the scroll direction
+        if (currentScrollTop > lastScrollTop) {
+            // Scrolling down, hide the floating bar
+            floatingBar.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up, show the floating bar
+            floatingBar.style.transform = 'translateY(0)';
+        }
+
+        // Update the last scroll position
+        lastScrollTop = currentScrollTop;
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+</script>
+
    
    
     </body> 
