@@ -655,7 +655,27 @@ Developed unit tests to ensure the accuracy of transformations from an initial t
         lastScrollTop = currentScrollTop;
     }
 
+    function smoothScroll(target) {
+        var targetElement = document.querySelector(target);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - floatingBar.offsetHeight, // Adjust for fixed header
+                behavior: 'smooth'
+            });
+        }
+    }
+
     window.addEventListener('scroll', handleScroll);
+
+    // Smooth scroll on link click
+    var sections = document.querySelectorAll('.sections-bar a');
+    sections.forEach(function (section) {
+        section.addEventListener('click', function (event) {
+            event.preventDefault();
+            var target = this.getAttribute('href');
+            smoothScroll(target);
+        });
+    });
 </script>
 
    
