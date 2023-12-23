@@ -698,12 +698,22 @@ Developed unit tests to ensure the accuracy of transformations from an initial t
     });
    $(document).ready(function () {
   // Scrolling text after "I Am -"
-  var iAmText = new Typed('#iAmText', {
-    strings: ["name","Ndewo! Afa m bu Ezinne.", "Hi! My name is Ezinne."],
-    typeSpeed: 150, // Adjust typing speed
-    backSpeed: 140, // Adjust backspacing speed
-    loop: true, // Set to false if you don't want the text to loop
-    showCursor: false,
+  // var getting content of element with this id
+  var element = document.getElementById("iAmText");
+  var typed = new Typed(element, {
+    // string to alternate with one another, forming sentences with the existing text
+    strings: [
+      element.textContent + " like to do.",
+      element.textContent + " love.",
+      element.textContent + " do in my free time.",
+      element.textContent + " will never get tired of.",
+      element.textContent + " could spend hours doing."
+    ],
+    // animation details
+    typeSpeed: 60,
+    backSpeed: 50,
+    loop: true,
+    showCursor: false
   });
 });
 
