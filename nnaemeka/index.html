@@ -215,7 +215,7 @@
             <!-- Additional Content -->
             <div class="content">
                 <div class="content__container">
-                    <h3 class="headline scroll-animated">I Am - <span class="scrolling-text">Scrolling Text</span></h3>
+                    <h3 class="headline scroll-animated">I Am - <span id="scrollingText"class="scrolling-text">Scrolling Text</span></h3>
 
                     <ul class="content__container__list">
                         <li class="content__container__list__item">I speak English</li>
@@ -747,6 +747,12 @@ Developed unit tests to ensure the accuracy of transformations from an initial t
             contactForm.reset();
         });
     });
+   // Get a reference to the span element by id
+var scrollingTextElement = document.getElementById('scrollingText');
+
+// Update the text content dynamically
+scrollingTextElement.textContent = 'New Scrolling Text';
+
 </script>
 
    
