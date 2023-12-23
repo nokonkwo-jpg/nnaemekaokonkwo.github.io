@@ -681,22 +681,6 @@ Developed unit tests to ensure the accuracy of transformations from an initial t
             smoothScroll(target);
         });
     });
-    document.addEventListener('DOMContentLoaded', function () {
-        var contactForm = document.getElementById('contact-form');
-        var successMessage = document.querySelector('.success-message');
-
-        contactForm.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the form from submitting the traditional way
-
-            // You can add additional logic here if needed
-
-            // Display the success message
-            successMessage.style.display = 'block';
-
-            // Reset the form (optional)
-            contactForm.reset();
-        });
-    });
    $(document).ready(function () {
   // Scrolling text after "I Am -"
   // var getting content of element with this id
