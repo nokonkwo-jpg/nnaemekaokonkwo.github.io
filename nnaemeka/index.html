@@ -58,7 +58,7 @@
 
         .sections-bar li {
             float: left;
-            margin-right: 15px;
+            margin-right: 25px;
         }
 
         .sections-bar a {
@@ -79,108 +79,45 @@
             height: 25px; /* Set the height according to your logo size */
             margin-right: 15px;
         }
-        
-    body {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        background-color: #34495e;
-    }
-
-    .content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 160px;
-        overflow: hidden;
-        font-family: 'Lato', sans-serif;
-        font-size: 35px;
-        line-height: 40px;
-        color: #ecf0f1;
-    }
-
-    .content__container {
-        font-weight: 600;
-        overflow: hidden;
-        height: 40px;
-        padding: 0 40px;
-        position: relative;
-
-        &:before {
-            content: '[';
-            left: 0;
+       .content {
+            text-align: center;
+            padding: 80px 0;
         }
 
-        &:after {
-            content: ']';
-            position: absolute;
-            right: 0;
+        .content__container {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        &:after,
-        &:before {
-            position: absolute;
-            top: 0;
-            color: #16a085;
-            font-size: 42px;
-            line-height: 40px;
-            animation-name: opacity;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
+        .content__container__text {
+            font-size: 24px;
+            margin-bottom: 20px;
+            overflow: hidden; /* Ensure text doesn't overflow */
+            white-space: nowrap; /* Prevent line breaks */
+            animation: scrollText 8s linear infinite; /* Adjust duration as needed */
         }
 
-        &__text {
-            display: inline;
-            float: left;
+        .content__container__list {
+            list-style-type: none;
+            padding: 0;
             margin: 0;
         }
 
-        &__list {
-            margin-top: 0;
-            padding-left: 110px;
-            text-align: left;
-            list-style: none;
-            animation-name: change;
-            animation-duration: 10s;
-            animation-iteration-count: infinite;
+        .content__container__list__item {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
 
-            &__item {
-                line-height: 40px;
-                margin: 0;
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
             }
         }
-    }
-
-    @keyframes opacity {
-        0%, 100% {
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes change {
-        0%, 12.66%, 100% {
-            transform: translate3d(0, 0, 0);
-        }
-        16.66%, 29.32% {
-            transform: translate3d(0, -25%, 0);
-        }
-        33.32%, 45.98% {
-            transform: translate3d(0, -50%, 0);
-        }
-        49.98%, 62.64% {
-            transform: translate3d(0, -75%, 0);
-        }
-        66.64%, 79.3% {
-            transform: translate3d(0, -50%, 0);
-        }
-        83.3%, 95.96% {
-            transform: translate3d(0, -25%, 0);
-        }
-    }
+        
     </style>
 
         
@@ -206,7 +143,7 @@
         <div class="sections-bar">
             <ul>
                 <li><a href="#intro">Home</a></li>
-                <li><a href="#about">I Am</a></li>
+                <li><a href="#about">Who Am I?</a></li>
                 <li><a href="#service">Projects</a></li>
                 <li><a href="#work">Latest Work</a></li>
                 <li><a href="#contact">Contact Me</a></li>
