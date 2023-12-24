@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passions</title>
+    <title>Nnaemeka Okonkwo</title>
 
-    <!-- Link to the same stylesheet used in the index page -->
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css" href="assets/css/plugins.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
     <style>
-        /* Add any additional styles specific to passions.html here */
         body {
             margin: 0;
             padding: 0;
@@ -19,7 +24,76 @@
             overflow-x: hidden;
         }
 
-        /* You can copy the styles for .floating-bar, .image-container, .content-area, etc. from index.html */
+        .floating-bar {
+            top: 20px;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 10px;
+            z-index: 1000;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transition: background-color 0.3s ease;
+        }
+
+        .sections-bar {
+            overflow: hidden;
+        }
+
+        .sections-bar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .sections-bar li {
+            float: left;
+            margin-right: 25px;
+        }
+
+        .sections-bar a {
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .sections-bar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .logo-container img {
+            height: 25px; /* Set the height according to your logo size */
+            margin-right: 15px;
+        }
+
+        /* Add any additional styles specific to passions.html here */
+        .image-container {
+            position: relative;
+            height: 100vh; /* Adjust as needed */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .background-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/img/background.jpg'); /* Replace with your image path */
+            opacity: 0.5; /* Adjust as needed */
+        }
+
+        .content-area {
+            padding: 50px; /* Adjust as needed */
+            color: #fff; /* Adjust text color */
+        }
     </style>
 </head>
 
@@ -31,9 +105,9 @@
         </div>
         <div class="sections-bar">
             <ul>
-                <li><a href="#intro">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#about">Who Am I?</a></li>
-                <li><a href="passions.html">Passions</a></li>
+                <li><a href="#">Passions</a></li>
                 <li><a href="#work">Latest Work</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
@@ -49,19 +123,12 @@
 
     <!-- CONTENT AREA -->
     <div class="content-area">
+        <h1>Welcome to the Passions Page!</h1>
+        <p>This is the passions page content.</p>
+        <!-- Add more content as needed -->
 
-        <!-- CONTENT AREA INNER -->
-        <div class="content-area-inner">
-            <!-- Add your passions page content here -->
-            <h1>Welcome to the Passions Page!</h1>
-            <p>This is the passions page content.</p>
-            <!-- Add more content as needed -->
-
-            <!-- Link back to the index page -->
-            <p><a href="index.html">Back to Home</a></p>
-        </div>
-        <!-- /CONTENT AREA INNER -->
-
+        <!-- Link back to the index page -->
+        <p><a href="index.html">Back to Home</a></p>
     </div>
     <!-- /CONTENT AREA -->
 
@@ -71,4 +138,3 @@
 </body>
 
 </html>
-
