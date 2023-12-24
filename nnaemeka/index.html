@@ -526,12 +526,17 @@
     }
 
     function smoothScroll(target) {
-        var targetElement = document.querySelector(target);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - floatingBar.offsetHeight, // Adjust for fixed header
-                behavior: 'smooth'
-            });
+        // Exclude the redirection link
+        if (target !== '#passions') {
+            var targetElement = document.querySelector(target);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - floatingBar.offsetHeight,
+                    behavior: 'smooth'
+                });
+            }
+        } else {
+            window.location.href = 'passions.html'; // Redirect to the passions page
         }
     }
 
