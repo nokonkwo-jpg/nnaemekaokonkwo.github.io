@@ -70,6 +70,58 @@
             height: 25px; /* Set the height according to your logo size */
             margin-right: 15px;
         }
+         .showcase .item .background-image {
+            background-size: 3024px 4032px; /* Set the desired dimensions */
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 133.33%; /* Maintain aspect ratio (4032 / 3024 * 100) */
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .showcase .item .info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+            color: #fff;
+        }
+
+        .showcase .item .info h5,
+        .showcase .item .info p {
+            margin: 0;
+        }
+
+        .showcase .item .info h5 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .showcase .item .info p {
+            font-size: 16px;
+        }
+
+        .showcase .item .info p.subline {
+            font-weight: 500;
+        }
+
+        .showcase .item:hover .background-image {
+            -webkit-filter: brightness(70%);
+            filter: brightness(70%);
+        }
+
+        .showcase .item .work-lightbox {
+            display: none;
+        }
+
+        .showcase .item .img-responsive {
+            width: 100%;
+            height: auto;
+            border: 5px solid #fff;
+        }
     </style>
 </head>
 
