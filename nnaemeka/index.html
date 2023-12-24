@@ -540,12 +540,22 @@
     }
 
     // Smooth scroll on link click
-    var sections = document.querySelectorAll('.sections-bar a');
-    sections.forEach(function (section) {
-        section.addEventListener('click', function (event) {
-            event.preventDefault();
-            var target = this.getAttribute('href');
-            smoothScroll(target);
+    document.querySelectorAll('.sections-bar a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - document.querySelector('.floating-bar').offsetHeight,
+                    behavior: 'smooth'
+                });
+            } else {
+                // If it's an external link, use standard link behavior
+                window.location.href = this.getAttribute('href');
+            }
         });
     });
    $(document).ready(function () {
