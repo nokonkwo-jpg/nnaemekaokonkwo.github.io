@@ -106,7 +106,7 @@
             <ul>
                 <li><a href="#intro">Home</a></li>
                 <li><a href="#about">Who Am I?</a></li>
-               <li><a href="#passions.html">Passions</a></li>
+               <li><a href="passions">Passions</a></li>
                 <li><a href="#work">Latest Work</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
@@ -526,21 +526,18 @@
     }
 
     function smoothScroll(target) {
-        // Exclude the redirection link
-        if (target !== '#passions') {
+        if (target === '#passions') {
+            window.location.href = 'passions.html'; // Redirect to the passions page
+        } else {
             var targetElement = document.querySelector(target);
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - floatingBar.offsetHeight,
+                    top: targetElement.offsetTop,
                     behavior: 'smooth'
                 });
             }
-        } else {
-            window.location.href = 'passions.html'; // Redirect to the passions page
         }
     }
-
-    window.addEventListener('scroll', handleScroll);
 
     // Smooth scroll on link click
     var sections = document.querySelectorAll('.sections-bar a');
