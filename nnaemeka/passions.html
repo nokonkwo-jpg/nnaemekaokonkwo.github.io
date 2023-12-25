@@ -76,11 +76,14 @@
             overflow: hidden;
         } 
         .showcase .item .background-image {
-            width: 100%;
-            height: auto;
-            background-size: cover;
-            background-position: center center;
-            position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Change this line to make the height auto-adjust based on the image aspect ratio */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
         }
 
         .showcase .item .info {
