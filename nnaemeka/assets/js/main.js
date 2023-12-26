@@ -56,62 +56,48 @@ jQuery(document).ready(function($) {
     });
     
     
-    // AJAX CONTACT FORM SUBMIT
+     // AJAX CONTACT FORM SUBMIT
     $("#contact-form").submit(function(e) {
-
         e.preventDefault();
         var postdata = $(this).serialize();
-
+        
         $.ajax({
-
             type: "POST",
-            url: "assets/php/contact.php",
+            url: "https://formspree.io/f/xnqeaoea",
             data: postdata,
             dataType: "json",
             success: function(json) {
-
                 $("#contact-form input, #contact-form textarea").removeClass("error");
-
                 setTimeout(function(){
-
                     if (json.nameMessage !== "") {
-
                         $("#contact-form-name").addClass("error");
-
                     }
-
                     if (json.emailMessage !== "") {
-
                         $("#contact-form-email").addClass("error");
-
                     }
-
                     if (json.messageMessage !== "") {
-
                         $("#contact-form-message").addClass("error");
-
                     }
-
                 }, 10);
-
+                
                 if (json.nameMessage === "" && json.emailMessage === "" && json.messageMessage === "") {
-
                     $("#contact-form.error input, #contact-form.error textarea").removeClass("error");
                     $('#contact-form').addClass("success");
                     $('#contact-form textarea, #contact-form input').val("");
                     
                     setTimeout(function(){
-                        
                         $('#contact-form').removeClass("success");
-                        
                     },4000);
-
                 }
-
+                
+                // Log the response to the console for debugging
+                console.log("Formspree Response:", json);
+            },
+            error: function(xhr, status, error) {
+                // Log any errors to the console for debugging
+                console.error("Formspree Error:", error);
             }
-
         });
-
     });
 
     
