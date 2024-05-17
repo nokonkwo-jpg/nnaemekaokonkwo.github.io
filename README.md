@@ -1,4 +1,8 @@
 # Personal Portfolio 
+## Overview
+
+Welcome to the repository of my personal website! This project showcases my portfolio, skills, and contact information using HTML, CSS, and JavaScript. Below you will find instructions on how to set up, customize, and deploy the website.
+
 
 ## Installation & Deployment 📦
 - Clone the repository and modify the content of **index.html** according to your requirement.
