@@ -43,4 +43,4 @@ To view a live example, **[click here](https://nokonkwo-jpg.github.io/nnaemekaok
 - 🔃 Create a new pull request.
 
 ## License 📄
-This project is licensed under the MIT License - see the [LICENSE.txt](_License.txt) file for details.
+See the [LICENSE.txt](_License.txt) file for details.
