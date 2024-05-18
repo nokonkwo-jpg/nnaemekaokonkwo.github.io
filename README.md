@@ -17,7 +17,7 @@ Welcome to the repository of my personal website! This project showcases my port
 ✔️ Projects\
 ✔️ Contact Info
 
-To view a live example, **[click here](https://nokonkwo-jpg.github.io/nnaemekaokonkwo.github.io/nnaemeka/)**
+To view a live example, **[click here](https://nokonkwo-jpg.github.io/nnaemekaokonkwo.github.io/)**
 
 ## Tools Used 🛠️
 * [**GitHub Pages**](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) - To host my static website (HTML, CSS, JS).
